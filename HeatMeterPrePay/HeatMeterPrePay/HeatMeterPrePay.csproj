@@ -1,0 +1,382 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{06305647-861F-4B1A-AAA5-FCCC2E4A09E4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HeatMeterPrePay</RootNamespace>
+    <AssemblyName>HeatMeterPrePay</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CNPOPSOFT.Controls">
+      <HintPath>..\..\HeatMeterPrePay\CNPOPSOFT.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.12\lib\net40\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>..\..\HeatMeterPrePay\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="SideBar">
+      <HintPath>..\..\HeatMeterPrePay\SideBar.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\..\HeatMeterPrePay\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CardEntity\CardHeadEntity.cs" />
+    <Compile Include="CardEntity\CardLocalDefs.cs" />
+    <Compile Include="CardEntity\CheckCardEntity.cs" />
+    <Compile Include="CardEntity\CheckCardEntityV2.cs" />
+    <Compile Include="CardEntity\CheckCardEntityV3.cs" />
+    <Compile Include="CardEntity\ClearCardEntity.cs" />
+    <Compile Include="CardEntity\ConsumeCardEntity.cs" />
+    <Compile Include="CardEntity\DeviceHeadEntity.cs" />
+    <Compile Include="CardEntity\ForceValveOperationCardEntity.cs" />
+    <Compile Include="CardEntity\RefundCardEntity.cs" />
+    <Compile Include="CardEntity\SettingCardEntity.cs" />
+    <Compile Include="CardEntity\TransCardEntity.cs" />
+    <Compile Include="CardReader\ICardReader.cs" />
+    <Compile Include="CardReader\MHCardReader.cs" />
+    <Compile Include="CardReader\QingtongReader.cs" />
+    <Compile Include="CardReader\RDIC100Reader.cs" />
+    <Compile Include="CreateUserInNumbersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateUserInNumbersForm.Designer.cs">
+      <DependentUpon>CreateUserInNumbersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\AllPermissionItemsEntity.cs" />
+    <Compile Include="Entity\PermissionItemEntity.cs" />
+    <Compile Include="exception\WMSqlException.cs" />
+    <Compile Include="HeatMeterPrePay.Designer.cs">
+      <DependentUpon>HeatMeterPrePay.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherForm\WaitingDialogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherForm\WaitingDialogForm.Designer.cs">
+      <DependentUpon>WaitingDialogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PasswordChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PasswordChange.Designer.cs">
+      <DependentUpon>PasswordChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="QueryBaseView\QueryBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QueryTabPage\QueryCancelDealTabPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QueryTabPage\QueryDayMonthYearTabpage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QueryTabPage\QueryDealDetailTabPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QueryTabPage\QueryRefundTabPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QueryTabPage\QueryRepairMeterTabPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QueryTabPage\QueryReplaceCardTabPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QueryTabPage\QueryTotalItemsTabpage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QueryTabPage\SuspiciousUserQueryTabPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterForm.Designer.cs">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabPage\AccountDailyPayPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabPage\AdvancedQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TabPage\AdvancedQuery.Designer.cs">
+      <DependentUpon>AdvancedQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabPage\RefundFailedPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabPage\CancelDealPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabPage\CheckCardPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabPage\ClearCardPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabPage\CreateNewUserPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabPage\DbBackupPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabPage\EmptyCardPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabPage\ForceCloseOrOpenCardPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabPage\IQueryAction.cs" />
+    <Compile Include="TabPage\PermissionManagerTabpage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabPage\PriceSettingsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabPage\QueryPursuitPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabPage\QueryUsersPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabPage\QueryValue.cs" />
+    <Compile Include="TabPage\ReadCardPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabPage\ReceiptPrintPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabPage\RefundCardPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabPage\RefundProcessPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabPage\RepairChangeMeterPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabPage\ReplaceCardPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabPage\SettingCardPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabPage\SettingsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabPage\SettingsUtils.cs" />
+    <Compile Include="TabPage\SoldoutQueryTabpage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabPage\StaffManagementPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabPage\SystemSettingPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabPage\TransCardPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabPage\TransforOwnerTabPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabPage\TransWrongMeterTabPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabPage\UserCardPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabPage\UserInfoModifyPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabPage\UserPasswordResetPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabPage\UserSearchForTrans.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabPage\WelcomePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabPage\WMConstant.cs" />
+    <Compile Include="Util\AtapiDevice.cs" />
+    <Compile Include="Util\ConfigAppSettings.cs" />
+    <Compile Include="Util\ConfigUtil.cs" />
+    <Compile Include="Util\ConvertUtils.cs" />
+    <Compile Include="Util\CRCUtil.cs" />
+    <Compile Include="Util\DbUtil.cs" />
+    <Compile Include="Util\DriverStatus.cs" />
+    <Compile Include="Util\ExcelUtil.cs" />
+    <Compile Include="Util\GetVersionOutParams.cs" />
+    <Compile Include="Util\HardDiskInfo.cs" />
+    <Compile Include="Util\HardwareInfo.cs" />
+    <Compile Include="Util\IdeRegs.cs" />
+    <Compile Include="Util\IdSector.cs" />
+    <Compile Include="Util\INIOperationClass.cs" />
+    <Compile Include="Util\InputUtils.cs" />
+    <Compile Include="Util\NumbersConvertor.cs" />
+    <Compile Include="Util\PermissionFlags.cs" />
+    <Compile Include="Util\PrintReceiptUtil.cs" />
+    <Compile Include="Util\QueryConditionEntity.cs" />
+    <Compile Include="Util\RegisterUtil.cs" />
+    <Compile Include="Util\SendCmdInParams.cs" />
+    <Compile Include="Util\SendCmdOutParams.cs" />
+    <Compile Include="WaterMeter\Util\Hardware.cs" />
+    <Compile Include="Widget\ListViewNF.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Widget\WMMessageBox.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AboutForm.resources" />
+    <EmbeddedResource Include="CreateUserInNumbersForm.resources" />
+    <EmbeddedResource Include="LoginForm.resources" />
+    <EmbeddedResource Include="MainForm.resources" />
+    <EmbeddedResource Include="OtherForm\WaitingDialogForm.resources" />
+    <EmbeddedResource Include="PasswordChange.resources" />
+    <EmbeddedResource Include="Properties\Resources.resources" />
+    <EmbeddedResource Include="QueryBaseView\QueryBase.resources" />
+    <EmbeddedResource Include="QueryTabPage\QueryCancelDealTabPage.resources" />
+    <EmbeddedResource Include="QueryTabPage\QueryDayMonthYearTabpage.resources" />
+    <EmbeddedResource Include="QueryTabPage\QueryDealDetailTabPage.resources" />
+    <EmbeddedResource Include="QueryTabPage\QueryRefundTabPage.resources" />
+    <EmbeddedResource Include="QueryTabPage\QueryRepairMeterTabPage.resources" />
+    <EmbeddedResource Include="QueryTabPage\QueryReplaceCardTabPage.resources" />
+    <EmbeddedResource Include="QueryTabPage\QueryTotalItemsTabpage.resources" />
+    <EmbeddedResource Include="QueryTabPage\SuspiciousUserQueryTabPage.resources" />
+    <EmbeddedResource Include="RegisterForm.resources" />
+    <EmbeddedResource Include="TabPage\AccountDailyPayPage.resx">
+      <DependentUpon>AccountDailyPayPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabPage\AdvancedQuery.resources" />
+    <EmbeddedResource Include="TabPage\CancelDealPage.resources" />
+    <EmbeddedResource Include="TabPage\CheckCardPage.resources" />
+    <EmbeddedResource Include="TabPage\ClearCardPage.resources" />
+    <EmbeddedResource Include="TabPage\CreateNewUserPage.resources" />
+    <EmbeddedResource Include="TabPage\DbBackupPage.resources" />
+    <EmbeddedResource Include="TabPage\EmptyCardPage.resources" />
+    <EmbeddedResource Include="TabPage\ForceCloseOrOpenCardPage.resources" />
+    <EmbeddedResource Include="TabPage\PermissionManagerTabpage.resources" />
+    <EmbeddedResource Include="TabPage\PriceSettingsPage.resources" />
+    <EmbeddedResource Include="TabPage\QueryPursuitPage.resources" />
+    <EmbeddedResource Include="TabPage\QueryUsersPage.resources" />
+    <EmbeddedResource Include="TabPage\ReadCardPage.resources" />
+    <EmbeddedResource Include="TabPage\ReceiptPrintPage.resources" />
+    <EmbeddedResource Include="TabPage\RefundCardPage.resources" />
+    <EmbeddedResource Include="TabPage\RefundFailedPage.resx">
+      <DependentUpon>RefundFailedPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabPage\RefundProcessPage.resources" />
+    <EmbeddedResource Include="TabPage\RepairChangeMeterPage.resources" />
+    <EmbeddedResource Include="TabPage\ReplaceCardPage.resources" />
+    <EmbeddedResource Include="TabPage\SettingCardPage.resources" />
+    <EmbeddedResource Include="TabPage\SettingsPage.resources" />
+    <EmbeddedResource Include="TabPage\SoldoutQueryTabpage.resources" />
+    <EmbeddedResource Include="TabPage\StaffManagementPage.resources" />
+    <EmbeddedResource Include="TabPage\SystemSettingPage.resources" />
+    <EmbeddedResource Include="TabPage\TransCardPage.resources" />
+    <EmbeddedResource Include="TabPage\TransforOwnerTabPage.resources" />
+    <EmbeddedResource Include="TabPage\TransWrongMeterTabPage.resources" />
+    <EmbeddedResource Include="TabPage\UserCardPage.resources" />
+    <EmbeddedResource Include="TabPage\UserInfoModifyPage.resources" />
+    <EmbeddedResource Include="TabPage\UserPasswordResetPage.resources" />
+    <EmbeddedResource Include="TabPage\UserSearchForTrans.resources" />
+    <EmbeddedResource Include="TabPage\WelcomePage.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="app.manifest" />
+    <None Include="HeatMeterPrePay.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>HeatMeterPrePay.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\GwInfoPay\GwInfoPay\GwInfoPay\GwInfoPay.csproj">
+      <Project>{b397ef8f-b95e-47ad-aab3-397997a2de12}</Project>
+      <Name>GwInfoPay</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
