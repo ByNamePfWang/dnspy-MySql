@@ -38,8 +38,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\dnspy-9-15 1012\dnspy\HeatMeterPrePay\bin\Debug\CNPOPSOFT.Controls.dll</HintPath>
     </Reference>
-    <Reference Include="DotNetBarcode">
-      <HintPath>..\packages\DotNetBarcode.dll</HintPath>
+    <Reference Include="DotNetBarcode, Version=2.4.2480.34660, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\DotNetBarcode.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
