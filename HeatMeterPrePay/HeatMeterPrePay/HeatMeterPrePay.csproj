@@ -372,5 +372,11 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\GwInfoPay\GwInfoPay\GwInfoPay.csproj">
+      <Project>{b397ef8f-b95e-47ad-aab3-397997a2de12}</Project>
+      <Name>GwInfoPay</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

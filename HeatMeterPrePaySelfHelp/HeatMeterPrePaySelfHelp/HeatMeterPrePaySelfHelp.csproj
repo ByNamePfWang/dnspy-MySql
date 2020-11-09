@@ -216,6 +216,12 @@
   <ItemGroup>
     <None Include="Resources\success.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\GwInfoPay\GwInfoPay\GwInfoPay.csproj">
+      <Project>{b397ef8f-b95e-47ad-aab3-397997a2de12}</Project>
+      <Name>GwInfoPay</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
