@@ -168,8 +168,6 @@ namespace HeatMeterPrePaySelfHelp.Froms
 
             string code = dataRow2["code"].ToString();
             Program.code = code;
-            this.textBox1.Text = "1000";
-            this.textBox2.Text = "bj123456";
         }
 
         private void readRegisterInfofailed(string info)

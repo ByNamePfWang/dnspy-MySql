@@ -503,7 +503,6 @@ namespace HeatMeterPrePaySelfHelp
                 list.Add(operationLog);
 
                 Dictionary<string, string> payLogTableParam = new Dictionary<string, string>();
-                payLogTableParam.Add("id", ConvertUtils.ToInt64(consumeCardEntity2.UserId).ToString());
                 payLogTableParam.Add("userId", ConvertUtils.ToInt64(consumeCardEntity2.UserId).ToString());
                 payLogTableParam.Add("userName", dataRow2["username"].ToString());
                 payLogTableParam.Add("pursuitNum", ConvertUtils.ToInt64(consumeCardEntity2.TotalRechargeNumber).ToString());
@@ -530,6 +529,9 @@ namespace HeatMeterPrePaySelfHelp
                     {
                         WMMessageBox.Show(this, "退款失败,后台程序会继续尝试退款操作,如1天内还未退款,请按照本软件首页提示的方式联系管理员！");
                     }
+                    // 取消写卡 
+                    long numx = (long)this.writeCard(consumeCardEntity.getEntity());
+                    Console.WriteLine(numx + "数据存储失败! 写卡的数据恢复到写卡之前");
                     WMMessageBox.Show(this, "数据存储失败！");
                     return;
                 }
